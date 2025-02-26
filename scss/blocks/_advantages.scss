@@ -1,0 +1,17 @@
+.advantages {
+    padding: px-to-vw(60) 0;
+    position: relative;
+    z-index: 2;
+    h2 {
+        @include section-title;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+            text-align: center;
+        }
+    }
+}

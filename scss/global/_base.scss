@@ -1,0 +1,15 @@
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+.btn {
+	@include button-styles;
+}

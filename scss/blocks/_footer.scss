@@ -1,0 +1,31 @@
+.footer {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: px-to-rem(-46px);
+        left: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: px-to-vw(245);
+        border-radius: 100%;
+        background: #d4010a;
+        filter: blur(250px);
+    }
+    &__container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__copy {
+        font-weight: $base-weight;
+        font-size: px-to-vw(36);
+        margin-bottom: px-to-vw(30);
+    }
+    padding-bottom: px-to-vw(30);
+}

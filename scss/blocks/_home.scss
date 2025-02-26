@@ -1,0 +1,80 @@
+.home {
+    padding-top: px-to-vw(44);
+    &__utp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: px-to-vw(80);
+        span {
+            width: 100%;
+            display: block;
+            background-color: $white;
+            height: 1px;
+        }
+        &-item {
+            font-family: $font-family;
+            border: 1px solid $white;
+            border-radius: px-to-vw(20);
+            font-size: px-to-vw(16);
+            text-transform: lowercase;
+            padding: px-to-vw(8) px-to-vw(20);
+        }
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vw(20);
+        max-width: px-to-vw(556);
+        h1 {
+            span {
+                @include label-title;
+                display: block;
+            }
+            b {
+                font-family: $second-family;
+                font-size: px-to-vw(80);
+                font-weight: $base-weight;
+            }
+        }
+
+        p {
+            font-size: px-to-vw(16);
+        }
+
+        &-arround {
+            margin-top: px-to-vw(68);
+            position: relative;
+            width: px-to-vw(316);
+            height: px-to-vw(129);
+            border-radius: 100%;
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: -40%;
+                left: -50%;
+                transform: translateX(37%);
+                background: #d4010a;
+                filter: blur(px-to-vw(100));
+            }
+        }
+    }
+
+    &__advantages {
+        display: flex;
+        gap: px-to-vw(48);
+        &-item {
+            max-width: px-to-vw(118);
+            h2 {
+                font-weight: 600;
+                font-size: px-to-vw(36);
+                margin-bottom: 4px;
+            }
+            p {
+                font-size: px-to-vw(16);
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.header {
+    &__container {
+        padding: px-to-vw(10) 0;
+        display: flex;
+        justify-content: center;
+    }
+}
