@@ -98,6 +98,9 @@ main {
 }
 
 .btn {
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
   border-radius: 20px;
   padding: 0.8333333333vw 1.3020833333vw;
   background-color: #d4010a;
@@ -106,6 +109,7 @@ main {
   font-weight: 400;
   font-size: 0.8333333333vw;
   text-transform: uppercase;
+  display: block;
 }
 .btn:hover {
   background: #b30008;

@@ -11,5 +11,9 @@ main {
 }
 
 .btn {
+	z-index: 2;
+	position: relative;
+	cursor: pointer;
 	@include button-styles;
+	display: block;
 }
