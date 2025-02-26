@@ -122,6 +122,10 @@ main {
   justify-content: center;
 }
 
+.menu {
+  position: relative;
+  z-index: 5;
+}
 .menu ul {
   display: flex;
   gap: 1.71875vw;

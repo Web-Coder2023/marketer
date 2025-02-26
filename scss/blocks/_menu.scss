@@ -1,4 +1,6 @@
 .menu {
+    position: relative;
+    z-index: 5;
     ul {
         display: flex;
         gap: px-to-vw(33);
