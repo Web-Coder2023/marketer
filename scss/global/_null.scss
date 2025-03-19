@@ -31,7 +31,7 @@ body {
 	color: $white;
 	line-height: 1;
 	font-family: $font-family;
-	font-size: px-to-vw(16);
+	font-size: 16px;
 }
 
 input,
@@ -77,6 +77,14 @@ h6 {
 /*--------------------*/
 [class*="__container"] {
 	width: 90%;
-	max-width: px-to-vw(1200);
+	max-width: 1200px;
 	margin: 0 auto;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+section {
+	padding: 50px 0;
 }

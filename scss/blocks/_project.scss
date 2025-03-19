@@ -1,6 +1,6 @@
 .project {
     position: relative;
-    padding: px-to-vw(60) 0;
+    padding: 60px 0;
     z-index: 2;
     
     h2 {
@@ -8,10 +8,10 @@
         @include section-title;
     }
     &__wrap {
-        margin-top: px-to-vw(80);
+        margin-top: 80px;
         display: flex;
         align-items: center;
-        gap: px-to-vw(60);
+        gap: 60px;
     }
     &__slider {
         width: 100%;
@@ -20,15 +20,26 @@
         background-color: black;
         border-radius: 20px;
         overflow: hidden;
-        height: px-to-vw(510);
+        height: 510px;
         display: flex;
         align-items: center;
         justify-content: center;
+        @media (max-width: 768px) {
+            height: 283px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
     }
 
     .btn {
         margin: 0 auto;
-        margin-top: px-to-vw(70);
+        margin-top: 70px;
         display: block;
+        @media (max-width: 768px) {
+            margin-top: 20px;
+        }
     }
 }

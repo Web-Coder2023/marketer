@@ -1,6 +1,6 @@
 @mixin button-styles {
     border-radius: 20px;
-    padding: px-to-vw(16) px-to-vw(25);
+    padding: 16px 25px;
     background-color: $red;
     transition:
         background 0.3s ease,
@@ -8,11 +8,15 @@
 
     font-family: $font-family;
     font-weight: 400;
-    font-size: px-to-vw(16);
+    font-size: 16px;
     text-transform: uppercase;
     &:hover {
         background: #b30008; // более темный красный при наведении
         transform: scale(1.05); // немного увеличиваем кнопку
+    }
+    @media (max-width: 768px) {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }
 
@@ -25,11 +29,14 @@
     font-family: $second-family;
     font-weight: 600;
     letter-spacing: -0.01em;
-    font-size: px-to-vw(55);
+    font-size: 55px;
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
 }
 
 @mixin label-title {
     font-family: $second-family;
     font-weight: 600;
-    font-size: px-to-vw(40);
+    font-size: 40px;
 }

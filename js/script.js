@@ -134,3 +134,20 @@ const scroll = () => {
   });
 }
 scroll();
+
+const burger = document.querySelector('.menu__burger');
+const body = document.querySelector('body');
+const menuBody = document.querySelector('.menu ul');
+
+burger.addEventListener('click', (event) => {
+  menuBody.classList.toggle('active');
+  body.classList.toggle('lock');
+  event.stopPropagation();
+});
+
+document.addEventListener('click', (event) => {
+  if (!menuBody.contains(event.target) && !burger.contains(event.target)) {
+    menuBody.classList.remove('active');
+    body.classList.remove('lock');
+  }
+});

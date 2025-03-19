@@ -1,7 +1,11 @@
 .header {
     &__container {
-        padding: px-to-vw(10) 0;
+        padding: 10px 0;
         display: flex;
         justify-content: center;
+        @media (max-width: 768px) {
+            padding: 10px 0;
+            justify-content: flex-end;
+        }
     }
 }

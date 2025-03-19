@@ -9,7 +9,7 @@
         right: 0;
         display: block;
         width: 100%;
-        height: px-to-vw(245);
+        height: 245px;
         border-radius: 100%;
         background: #d4010a;
         filter: blur(250px);
@@ -24,8 +24,16 @@
 
     &__copy {
         font-weight: $base-weight;
-        font-size: px-to-vw(36);
-        margin-bottom: px-to-vw(30);
+        font-size: 36px;
+        margin-bottom: 30px;
     }
-    padding-bottom: px-to-vw(30);
+    padding-bottom: 30px;
+    @media (max-width: 768px) {
+        &__copy {
+            margin-top: 20px;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        padding-bottom: 30px;
+    }
 }

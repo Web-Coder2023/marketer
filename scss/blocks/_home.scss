@@ -1,12 +1,12 @@
 .home {
-    padding-top: px-to-vw(44);
+    padding-top: 44px;
     &__utp {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
         z-index: 2;
-        margin-bottom: px-to-vw(80);
+        margin-bottom: 80px;
         span {
             width: 100%;
             display: block;
@@ -16,10 +16,15 @@
         &-item {
             font-family: $font-family;
             border: 1px solid $white;
-            border-radius: px-to-vw(20);
-            font-size: px-to-vw(16);
+            border-radius: 20px;
+            font-size: 16px;
             text-transform: lowercase;
-            padding: px-to-vw(8) px-to-vw(20);
+            padding: 8px 20px;
+            @media (max-width: 768px) {
+                padding: 8px 10px;
+                border-radius: 20px;
+                font-size: 12px;
+            }
         }
     }
 
@@ -31,7 +36,7 @@
         width: 744px;
         position: absolute;
         top: 10px;
-        right: px-to-vw(200);
+        right: 200px;
         height: 675px;
         &::after {
             content: "";
@@ -42,12 +47,11 @@
             top: 0;
             left: 0;
             background: #d4010a;
-            filter: blur(px-to-vw(250));
+            filter: blur(250px);
         }
         img {
             position: absolute;
             z-index: 3;
-            top: 10px;
             object-fit: cover;
         }
         &::before {
@@ -66,8 +70,8 @@
     &__right {
         display: flex;
         flex-direction: column;
-        gap: px-to-vw(20);
-        max-width: px-to-vw(556);
+        gap: 20px;
+        max-width: 556px;
         h1 {
             span {
                 @include label-title;
@@ -75,20 +79,32 @@
             }
             b {
                 font-family: $second-family;
-                font-size: px-to-vw(80);
+                font-size: 80px;
                 font-weight: $base-weight;
+            }
+            @media (max-width: 768px) {
+                span {
+                    font-size: 20px;
+                }
+                b {
+                    font-size: 40px;
+                }
             }
         }
 
         p {
-            font-size: px-to-vw(16);
+            font-size: 16px;
+            @media (max-width: 768px) {
+                font-size: 12px;
+                text-align: center;
+            }
         }
 
         &-arround {
-            margin-top: px-to-vw(68);
+            margin-top: 68px;
             position: relative;
-            width: px-to-vw(316);
-            height: px-to-vw(129);
+            width: 316px;
+            height: 129px;
             border-radius: 100%;
             &::after {
                 content: "";
@@ -100,23 +116,46 @@
                 left: -50%;
                 transform: translateX(37%);
                 background: #d4010a;
-                filter: blur(px-to-vw(100));
+                filter: blur(100px);
+            }
+            @media (max-width: 768px) {
+                position: static;
+                width: auto;
+                height: auto;
+                &::after {
+                    display: none;
+                }
             }
         }
     }
 
     &__advantages {
         display: flex;
-        gap: px-to-vw(48);
+        gap: 48px;
+        @media (max-width: 768px) {
+            gap: 10px;
+            flex-direction: column;
+        }
         &-item {
-            max-width: px-to-vw(118);
+            max-width: 118px;
+            @media (max-width: 768px) {
+                max-width: 500px;
+                font-size: 24px;
+                text-align: center;
+            }
             h2 {
                 font-weight: 600;
-                font-size: px-to-vw(36);
+                font-size: 36px;
                 margin-bottom: 4px;
+                @media (max-width: 768px) {
+                    font-size: 24px;
+                }
             }
             p {
-                font-size: px-to-vw(16);
+                font-size: 16px;
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
             }
         }
     }

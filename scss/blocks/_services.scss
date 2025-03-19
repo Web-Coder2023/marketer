@@ -1,5 +1,5 @@
 .services {
-    padding: px-to-vw(60) 0;
+    padding: 60px 0;
     position: relative;
     z-index: 2;
     h2 {
@@ -10,60 +10,89 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: px-to-vw(30);
-        margin-top: px-to-vw(69);
+        gap: 30px;
+        margin-top: 69px;
+        @media (max-width: 768px) {
+            gap: 20px;
+        }
     }
     &__item {
-        border: px-to-vw(2) solid #fff;
-        border-radius: px-to-vw(20);
+        border: 2px solid #fff;
+        border-radius: 20px;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: px-to-vw(50) px-to-vw(50) px-to-vw(26) px-to-vw(50);
+        padding: 50px 50px 26px 50px;
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.08);
+        @media (max-width: 768px) {
+            border-radius: 20px;
+            padding: 20px 14px;
+        }
         &-head {
             display: flex;
             align-items: center;
-            gap: px-to-vw(21);
+            gap: 21px;
             h3 {
                 font-family: $second-family;
                 font-weight: 600;
-                font-size: px-to-vw(40);
+                font-size: 40px;
                 text-transform: uppercase;
+                @media (max-width: 768px) {
+                    text-align: center;
+                    font-size: 23px;
+                }
             }
 
             span {
                 display: block;
                 border: 1px solid #fff;
-                border-radius: px-to-vw(20);
-                padding: px-to-vw(10);
+                border-radius: 20px;
+                padding: 10px;
 
                 font-weight: 200;
-                font-size: px-to-vw(20);
+                font-size: 20px;
+            }
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin-bottom: 20px;
+                span {
+                    display: none;
+                }
             }
         }
-
+        
         .oldPrice {
             font-weight: 600;
-            font-size: px-to-vw(48);
+            font-size: 48px;
             text-decoration: line-through;
             opacity: 0.5;
+            @media (max-width: 768px) {
+                margin-top: 10px;
+                font-size: 24px;
+            }
         }
 
         .newPrice {
             font-weight: 600;
-            font-size: px-to-vw(64);
-            margin-bottom: px-to-vw(20);
+            font-size: 64px;
+            margin-bottom: 20px;
+            @media (max-width: 768px) {
+                margin-top: 10px;
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
         }
         &-left {
             ol {
-                padding-top: px-to-vw(28.5);
+                padding-top: 28.5px;
                 display: flex;
                 flex-direction: column;
-                gap: px-to-vw(10);
+                gap: 10px;
                 li {
                     line-height: 125%;
                     display: flex;
-                    gap: px-to-vw(10);
+                    gap: 10px;
                     a {
                         display: block;
                         width: 100%;
@@ -74,11 +103,27 @@
                     }
                     &::before {
                         content: "";
-                        width: px-to-vw(10);
-                        height: px-to-vw(10);
+                        width: 10px;
+                        height: 10px;
                         display: block;
                         background-color: $white;
                         border-radius: 100%;
+                    }
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                        padding-left: 14px;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 4px;
+                            left: 0;
+                            width: 5px;
+                            height: 5px;
+                            display: block;
+                            background-color: $white;
+                            border-radius: 100%;
+                        }
                     }
                 }
             }
@@ -87,6 +132,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            border: 2px solid #fff;
+            flex-direction: column;
         }
     }
 }
