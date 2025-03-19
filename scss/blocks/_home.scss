@@ -31,18 +31,21 @@
     &__wrap {
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
     &__left {
-        width: 744px;
+        width: 49vw;
+        max-width: 744px;
         position: absolute;
-        top: 10px;
-        right: 200px;
-        height: 675px;
+        bottom: 0;
+        right: 0;
+        height: 47vw;
+        max-height: 675px;
         &::after {
             content: "";
             display: block;
             position: absolute;
-            height: 50%;
+            height: 40%;
             width: 70%;
             top: 0;
             left: 0;
@@ -53,19 +56,21 @@
             position: absolute;
             z-index: 3;
             object-fit: cover;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            z-index: 4;
-            display: block;
-            bottom: 0;
-            left: 0;
             width: 100%;
-            height: 82px;
-            background: #100;
-            filter: blur(20px);
+            height: 100%;
         }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     z-index: 4;
+        //     display: block;
+        //     bottom: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 82px;
+        //     background: #100;
+        //     filter: blur(20px);
+        // }
     }
     &__right {
         display: flex;
