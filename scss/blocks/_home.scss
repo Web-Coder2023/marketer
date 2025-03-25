@@ -1,6 +1,11 @@
 .home {
     padding-top: 44px;
     padding-bottom: 50px;
+    &__head {
+        .home__advantages {
+            display: none;
+        }
+    }
     &__utp {
         display: flex;
         justify-content: space-between;
@@ -105,8 +110,7 @@
         p {
             font-size: 16px;
             @media (max-width: 992px) {
-                font-size: 12px;
-                text-align: center;
+                max-width: 468px;
             }
         }
 
@@ -132,6 +136,9 @@
     }
 
     &__box {
+        p {
+            margin-bottom: 20px;
+        }
         .home__left {
             display: none;
         }
@@ -176,6 +183,12 @@
 }
 @media (max-width: 768px) {
     .home {
+        padding-bottom: 0;
+        &__utp {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 79px;
+        }
         &__container {
             width: 100%;
             max-width: 100%;
@@ -185,23 +198,21 @@
             width: 90%;
             min-height: 478px;
             width: 100%;
-            max-width: 423px;
+            max-width: 90%;
             margin: 0 auto;
             position: relative;
             background: url("../../img/generalPhotoMobile.png") center center / contain no-repeat;
         }
         &__right {
             width: 100%;
-            
+
             max-width: none;
             position: relative;
             z-index: 2;
             padding: 0;
-            
+
             min-height: 478px;
-            h1 {
-                transform: translateY(-40px);
-            }
+
         }
         &__left {
             display: none;
@@ -222,8 +233,20 @@
                 height: 100%;
             }
         }
-
+        &__head {
+            display: flex;
+            transform: translateY(-40px);
+            justify-content: space-between;
+            align-items: flex-start;
+            .home__advantages {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 108px;
+            }
+        }
         &__box {
+            margin: 0 auto;
             margin-top: auto;
             backdrop-filter: blur(30px);
             background: rgba(255, 255, 255, 0.02);
@@ -231,7 +254,12 @@
             border-radius: 20px;
             padding: 10px 10px 20px 10px;
             width: 100%;
-            max-width: 423px;
+            .home__advantages {
+                display: none;
+            }
+            p {
+                text-align: center;
+            }
             button {
                 margin: 0 auto;
                 margin-top: 20px;
@@ -249,5 +277,10 @@
                 display: none;
             }
         }
+    }
+}
+@media (max-width: 450px) {
+    .home__right h1 b {
+        font-size: 30px;
     }
 }

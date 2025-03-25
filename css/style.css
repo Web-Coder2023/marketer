@@ -217,6 +217,9 @@ main {
   padding-top: 44px;
   padding-bottom: 50px;
 }
+.home__head .home__advantages {
+  display: none;
+}
 .home__utp {
   display: flex;
   justify-content: space-between;
@@ -316,8 +319,7 @@ main {
 }
 @media (max-width: 992px) {
   .home__right p {
-    font-size: 12px;
-    text-align: center;
+    max-width: 468px;
   }
 }
 .home__right-arround {
@@ -338,6 +340,9 @@ main {
   transform: translateX(37%);
   background: #d4010a;
   filter: blur(100px);
+}
+.home__box p {
+  margin-bottom: 20px;
 }
 .home__box .home__left {
   display: none;
@@ -387,6 +392,14 @@ main {
 }
 
 @media (max-width: 768px) {
+  .home {
+    padding-bottom: 0;
+  }
+  .home__utp {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 79px;
+  }
   .home__container {
     width: 100%;
     max-width: 100%;
@@ -396,7 +409,7 @@ main {
     width: 90%;
     min-height: 478px;
     width: 100%;
-    max-width: 423px;
+    max-width: 90%;
     margin: 0 auto;
     position: relative;
     background: url("../../img/generalPhotoMobile.png") center center/contain no-repeat;
@@ -408,9 +421,6 @@ main {
     z-index: 2;
     padding: 0;
     min-height: 478px;
-  }
-  .home__right h1 {
-    transform: translateY(-40px);
   }
   .home__left {
     display: none;
@@ -431,7 +441,20 @@ main {
     width: 100%;
     height: 100%;
   }
+  .home__head {
+    display: flex;
+    transform: translateY(-40px);
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .home__head .home__advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 108px;
+  }
   .home__box {
+    margin: 0 auto;
     margin-top: auto;
     -webkit-backdrop-filter: blur(30px);
             backdrop-filter: blur(30px);
@@ -440,7 +463,12 @@ main {
     border-radius: 20px;
     padding: 10px 10px 20px 10px;
     width: 100%;
-    max-width: 423px;
+  }
+  .home__box .home__advantages {
+    display: none;
+  }
+  .home__box p {
+    text-align: center;
   }
   .home__box button {
     margin: 0 auto;
@@ -455,6 +483,11 @@ main {
   }
   .home .home__right-arround::after {
     display: none;
+  }
+}
+@media (max-width: 450px) {
+  .home__right h1 b {
+    font-size: 30px;
   }
 }
 .about__container {
